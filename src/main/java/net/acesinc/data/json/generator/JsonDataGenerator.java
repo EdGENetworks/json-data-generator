@@ -62,7 +62,11 @@ public class JsonDataGenerator {
                     }
                     case "http-post": {
                         log.info("Adding HTTP Post Logger with properties: " + elProps);
-                        loggers.add(new HttpPostLogger(elProps));
+                        try {
+                            loggers.add(new HttpPostLogger(elProps));
+                        } catch(java.security.NoSuchAlgorithmException ex) {
+                            log.error("java.security.NoSuchAlgorithmException occurred");
+                        }
                         break;
                     }
                 }
