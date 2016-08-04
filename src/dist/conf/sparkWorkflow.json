@@ -1,0 +1,16 @@
+{
+    "eventFrequency": 1000,
+    "varyEventFrequency": true,
+    "repeatWorkflow": true,
+    "timeBetweenRepeat": 5000,
+    "varyRepeatFrequency": true,
+    "steps": [{
+            "config": [{
+                    "timestamp": "nowTimestamp()",
+                    "name": "random('Bruce', 'Steve', 'Nick', 'Dave')",
+                    "role": "random('Lead Data Scientist', 'Lead Developer', 'Head of Data Science', 'Ninja')"
+                }],
+            "duration": 0
+        }]
+}
+

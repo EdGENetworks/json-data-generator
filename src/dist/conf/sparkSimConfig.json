@@ -1,0 +1,17 @@
+{
+    "workflows": [{
+            "workflowName": "test-kafka",
+            "workflowFilename": "sparkWorkflow.json"
+        }],
+    "producers": [{
+        "type": "kafka",
+        "broker.server": "0.0.0.0",
+        "broker.port": 9092,
+        "topic": "test",
+        "flatten": false,
+        "sync": false
+    },
+    {
+        "type":"logger"
+    }]
+}
